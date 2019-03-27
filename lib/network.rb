@@ -13,15 +13,31 @@ class Network
 
   def highest_paid_actor
     char_array = []
-    shows.each.do |x|
+    new_array = []
+    shows.each do |x|
     char_array << x.characters
+    end
 
-    char.max_by do |salary|
+    new_array = char_array.flatten
+    char = new_array.max_by { |z| z.salary}
+    char.actor
+
+# binding.pry
+    # char_array.each do |y|
+    #   new_array << y
+    # end
+
+
+    # end
+  # new_array.max_by { |x| x.salary }
+
+
+
 
 
     end
 
 
-  end
+
 
 end
